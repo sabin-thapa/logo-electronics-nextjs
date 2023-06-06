@@ -1,0 +1,8 @@
+.gradient_text {
+    background-image: linear-gradient(90deg, #A8620A 2%, #E09519 20%, #FFE581 48%, #FCDC75 52%, #F6C755 60%, #ECA522 71%, #E8980F 75%, #FEB838 100%);
+}
+
+.title_text {
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke-color: #E2E53C;
+}

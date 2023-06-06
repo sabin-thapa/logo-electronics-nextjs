@@ -7,16 +7,10 @@ const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
   className,
   ...props
 }) => {
-  const buttonClasses = classNames(
-    "text-white",
-    "px-6",
-    "py-2",
-    "font-poppins",
-    className
-  );
+
 
   return (
-    <button className={`${styles.btn} ${buttonClasses}`} {...props}>
+    <button className={classNames("text-white px-6 py-2 font-poppins font-bold text-lg", className, styles.btn)} {...props}>
       {children}
     </button>
   );

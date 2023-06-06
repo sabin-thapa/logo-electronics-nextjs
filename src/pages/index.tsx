@@ -5,5 +5,5 @@ import NavBar from "@/components/NavBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return <NavBar />;
+  return <> </>;
 }
