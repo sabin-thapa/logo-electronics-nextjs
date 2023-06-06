@@ -3,16 +3,13 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import Card from "@/components/Card";
 import classNames from "classnames";
+import TitleText from "@/components/TitleText";
 
 const Home = () => {
   return (
     <>
       <div className="main-bg-wrapper">
-        <h1
-          className={`font-routhem text-pinky text-6xl text-center pt-48 ${styles.title_text}`}
-        >
-          Logo Electronics
-        </h1>
+        <TitleText text="Logo Electronics" />
         <div className="flex items-center justify-center text-center py-4 pt-8">
           <div
             className={`w-40 h-[10px] bg-gray-400 ${styles.gradient_text} rounded-md`}
@@ -66,6 +63,10 @@ const Home = () => {
           height={36}
           alt="right arrow"
         />
+      </div>
+
+      <div className="products">
+        <TitleText text="Products" />
       </div>
     </>
   );
