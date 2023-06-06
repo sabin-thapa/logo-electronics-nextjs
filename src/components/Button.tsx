@@ -1,15 +1,25 @@
-import styles from '@/styles/Button.module.css'
-import classNames from 'classnames'
-import React from 'react'
+import styles from "@/styles/Button.module.css";
+import classNames from "classnames";
+import React from "react";
 
-const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ children, className, ...props }) => {
-  const buttonClasses = classNames('text-white', 'px-6', 'py-2', className)
+const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
+  children,
+  className,
+  ...props
+}) => {
+  const buttonClasses = classNames(
+    "text-white",
+    "px-6",
+    "py-2",
+    "font-poppins",
+    className
+  );
 
   return (
     <button className={`${styles.btn} ${buttonClasses}`} {...props}>
       {children}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

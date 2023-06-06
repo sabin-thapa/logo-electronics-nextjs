@@ -1,20 +1,56 @@
 .btn {
-    display: inline-block;
-    border-width: 2px;
-    border-radius: 32px;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(
+  position: relative;
+  padding: 5px 5px;
+  width: 110px;
+  margin-right: 10px;
+  background: linear-gradient(
+    90deg,
+    #920aa8 2%,
+    #e019cc 20%,
+    #ff81e3 48%,
+    #fc75d6 52%,
+    #df55f6 60%,
+    #e822ec 71%,
+    #e80f91 75%,
+    #ee19d8 81.25%,
+    #f323b7 87.5%,
+    #fe3873 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+}
+
+.btn_active {
+  color: white;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  background: linear-gradient(
       90deg,
-      rgba(146, 10, 168, 1),
-      rgba(224, 25, 204, 1),
-      rgba(255, 129, 227, 1),
-      rgba(252, 117, 214, 1),
-      rgba(223, 85, 246, 1),
-      rgba(232, 34, 236, 1),
-      rgba(232, 15, 145, 1),
-      rgba(237, 25, 216, 1),
-      rgba(254, 56, 115, 1)
-    );
-    border-image-repeat: stretch;
-    border-style: solid;
-    }
+      #920aa8 2%,
+      #e019cc 20%,
+      #ff81e3 48%,
+      #fc75d6 52%,
+      #df55f6 60%,
+      #e822ec 71%,
+      #e80f91 75%,
+      #ee19d8 81.25%,
+      #f323b7 87.5%,
+      #fe3873 100%
+    )
+    border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+
