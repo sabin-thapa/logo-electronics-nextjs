@@ -10,10 +10,10 @@ const NavBar = () => {
       </div>
       <div className='flex items-center'>
         <Link href='/'>
-         <Button>Home</Button>
+         <Button className='w-28 mr-10'>Home</Button>
         </Link>
         <Link href='/'>
-         <Button >Products</Button>
+         <Button className='w-32' >Products</Button>
         </Link>
       </div>
     </nav>
