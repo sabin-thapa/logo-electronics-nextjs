@@ -1,0 +1,20 @@
+.btn {
+    display: inline-block;
+    border-width: 2px;
+    border-radius: 32px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+      90deg,
+      rgba(146, 10, 168, 1),
+      rgba(224, 25, 204, 1),
+      rgba(255, 129, 227, 1),
+      rgba(252, 117, 214, 1),
+      rgba(223, 85, 246, 1),
+      rgba(232, 34, 236, 1),
+      rgba(232, 15, 145, 1),
+      rgba(237, 25, 216, 1),
+      rgba(254, 56, 115, 1)
+    );
+    border-image-repeat: stretch;
+    border-style: solid;
+    }
