@@ -3,16 +3,14 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import Card from "@/components/Card";
 import classNames from "classnames";
+import TitleText from "@/components/TitleText";
+import ProductCard from "@/components/ProductCard";
 
 const Home = () => {
   return (
     <>
       <div className="main-bg-wrapper">
-        <h1
-          className={`font-routhem text-pinky text-6xl text-center pt-48 ${styles.title_text}`}
-        >
-          Logo Electronics
-        </h1>
+        <TitleText text="Logo Electronics" />
         <div className="flex items-center justify-center text-center py-4 pt-8">
           <div
             className={`w-40 h-[10px] bg-gray-400 ${styles.gradient_text} rounded-md`}
@@ -46,26 +44,43 @@ const Home = () => {
       </div>
       <div
         className={classNames(
-          "-mt-56 flex items-center justify-around space-x-10 px-10",
+          "-mt-56 grid grid-cols-6 gap-x-[24rem] place-items-center",
           styles.card_section
         )}
       >
-        <Image
-          src="/assets/left_arrow.png"
-          width={36}
-          height={36}
-          alt="left arrow"
-        />
+        <div className="-mr-96">
+          <Image
+            src="/assets/left_arrow.png"
+            width={36}
+            height={36}
+            alt="left arrow"
+          />
+        </div>
         <Card />
         <Card />
         <Card />
         <Card />
-        <Image
-          src="/assets/right_arrow.png"
-          width={36}
-          height={36}
-          alt="right arrow"
-        />
+
+        <div className="-ml-96">
+          <Image
+            src="/assets/right_arrow.png"
+            width={36}
+            height={36}
+            alt="right arrow"
+          />
+        </div>
+      </div>
+
+      <div className="products-section">
+        <TitleText text="Products" />
+        <div className="products grid grid-cols-3 justify-around gap-2 my-20 place-items-center px-48">
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+        </div>
       </div>
     </>
   );
