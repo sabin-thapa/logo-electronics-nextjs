@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #380d41;
+  background-color: #26072C;
 }
 
 .main-bg-wrapper {
@@ -17,6 +17,5 @@ body {
   height: 100vh;
   background-image: url("/assets/main_bg.png");
   background-repeat: no-repeat;
+
 }
-
-

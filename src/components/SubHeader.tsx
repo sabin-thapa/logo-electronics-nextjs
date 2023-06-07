@@ -6,22 +6,33 @@ interface SubHeaderProps {
   text: string;
   fontColor?: string;
   className?: string;
+  extraLarge?: boolean;
+  extraBold?: boolean;
+  routhem?: boolean;
 }
 
 const SubHeader: React.FC<SubHeaderProps> = ({
   text,
   fontColor,
   className,
+  extraLarge,
+  extraBold,
+  routhem,
   ...props
 }) => {
   return (
     <h1
       className={classNames(
-        `uppercase font-extrabold font-bespax text-2xl tracking-widest`,
+        `uppercase text-2xl tracking-widest`,
         className,
-        { [styles.gradient_font]: !fontColor }
+        { [styles.gradient_font]: !fontColor },
+        { "text-4xl": extraLarge },
+        { "font-extrabold": extraBold },
+        { "font-medium": !extraBold },
+        { "font-routhem": routhem },
+        { "font-bespax": !routhem }
       )}
-      style={{ color: fontColor, fontFamily: "bespax" }}
+      style={{ color: fontColor }}
       {...props}
     >
       {text}

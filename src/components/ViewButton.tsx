@@ -20,7 +20,7 @@ const ViewButton: React.FC<ButtonProps> = ({
     <button
       className={classNames(
         styles.view_btn,
-        "text-white px-6 py-2 font-bespax font-bold text-lg rounded-full",
+        "text-white px-6 py-2 rounded-full",
         { [styles.gradient_font]: !fontColor },
         className
       )}
