@@ -21,7 +21,7 @@ const Home = () => {
           ></div>
 
           <h3
-            className={`uppercase font-routhem text-center text-white  tracking-widest text-2xl mx-6 `}
+            className={`uppercase font-bespax text-center text-white  tracking-widest text-2xl mx-6 `}
           >
             The Techies You Love
           </h3>
@@ -32,7 +32,7 @@ const Home = () => {
         </div>
         <div className="flex justify-center py-16">
           <Button
-            className="flex justify-between items-center w-96 py-4 text-white font-routhem uppercase tracking-widest"
+            className="flex justify-between items-center w-96 py-4 text-white font-bespax uppercase tracking-widest"
             fontColor="#fff"
             bolderBorder={true}
           >

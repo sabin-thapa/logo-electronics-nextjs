@@ -17,11 +17,11 @@ const SubHeader: React.FC<SubHeaderProps> = ({
   return (
     <h1
       className={classNames(
-        ` uppercase font-bold font-routhem text-2xl tracking-widest`,
-        { [styles.gradient_font]: !fontColor },
-        className
+        `uppercase font-extrabold font-bespax text-2xl tracking-widest`,
+        className,
+        { [styles.gradient_font]: !fontColor }
       )}
-      style={{ color: fontColor }}
+      style={{ color: fontColor, fontFamily: "bespax" }}
       {...props}
     >
       {text}

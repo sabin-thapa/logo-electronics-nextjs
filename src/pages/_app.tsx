@@ -16,10 +16,17 @@ const routhem = localFont({
   variable: "--font-routhem",
 });
 
+const bespax = localFont({
+  src: "../../public/fonts/Bespax.ttf",
+  variable: "--font-bespax",
+});
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Layout>
-      <main className={`${poppins.variable} ${routhem.variable} font-sans`}>
+      <main
+        className={`${poppins.variable} ${routhem.variable} ${bespax.variable} font-sans`}
+      >
         <Component {...pageProps} />
       </main>
     </Layout>

@@ -54,7 +54,7 @@ const Footer = () => {
               </p>
             </div>
             <div className="text-white mx-4 ml-36 flex-grow ">
-              <SubHeader text="Useful Links" className="mt-4" />
+              <SubHeader text="Useful Links" className="mt-4 " />
               <div className="flex flex-col pl-7 ">
                 <h1 className={faintFooterStyle}>Home</h1>
                 <h1 className={faintFooterStyle}>Product</h1>
@@ -66,7 +66,7 @@ const Footer = () => {
               <Image
                 src="/assets/follow_bg.svg"
                 height={200}
-                width={250}
+                width={270}
                 alt="follow us"
               />
               <div className="absolute top-2 left-11">
@@ -84,7 +84,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="copyrights_section flex min-h-[6rem] tracking-widest uppercase font-poppins text-center text-white justify-center items-center">
+        <div className="copyrights_section flex min-h-[6rem] tracking-widest uppercase font-bespax text-center text-white justify-center items-center">
           <p>Copyright 2021 lOGO ALL RIGHT RESERVED </p>
         </div>
       </div>
