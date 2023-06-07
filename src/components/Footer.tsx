@@ -54,7 +54,7 @@ const Footer = () => {
               </p>
             </div>
             <div className="text-white mx-4 ml-36 flex-grow ">
-              <SubHeader text="Useful Links" className="mt-4 " />
+              <SubHeader text="Useful Links" className="mt-4 " extraBold />
               <div className="flex flex-col pl-7 ">
                 <h1 className={faintFooterStyle}>Home</h1>
                 <h1 className={faintFooterStyle}>Product</h1>
@@ -71,7 +71,7 @@ const Footer = () => {
               />
               <div className="absolute top-2 left-11">
                 <div className="relative">
-                  <SubHeader text="Follow Us On" fontColor="#fff" />
+                  <SubHeader text="Follow Us On" fontColor="#fff" routhem />
                 </div>
               </div>
               <div className="flex gap-9 mt-6">

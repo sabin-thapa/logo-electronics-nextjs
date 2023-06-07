@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const NavBar = () => {
   return (
-    <nav className="flex items-center justify-around h-[80px] bg-[#380D41] py-4 px-6">
+    <nav className="flex items-center justify-around h-[140px] bg-[#380D41] py-4 px-6 ">
       <div className="flex items-center">
         <Image
           src="/assets/main_logo.png"

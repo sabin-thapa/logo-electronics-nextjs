@@ -15,7 +15,7 @@ const Home = () => {
         <title> Home | Logo Electronics</title>
       </Head>
       <div className="main-bg-wrapper">
-        <TitleText text="Logo Electronics" />
+        <TitleText text="Logo Electronics" textStroke />
         <div className="flex items-center justify-center text-center py-4 pt-8">
           <div
             className={`w-40 h-[10px] bg-gray-400 ${styles.gradient_text} rounded-md`}
