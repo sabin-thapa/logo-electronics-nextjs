@@ -7,6 +7,7 @@ import TitleText from "@/components/TitleText";
 import ProductCard from "@/components/ProductCard";
 import Head from "next/head";
 import SubHeader from "@/components/SubHeader";
+import Accordion from "@/components/Accordion";
 
 const Products = () => {
   return (
@@ -19,7 +20,7 @@ const Products = () => {
       </div>
       <div className="flex py-24  justify-around ">
         <SubHeader text=">> All Product" fontColor="#fff" extraLarge />
-        <SubHeader text=">> All Product" fontColor="#fff" extraLarge />
+        <Accordion />
       </div>
 
       <div className="products-section">
