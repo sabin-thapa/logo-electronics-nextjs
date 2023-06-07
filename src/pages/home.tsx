@@ -77,7 +77,7 @@ const Home = () => {
 
       <div className="products-section">
         <TitleText text="Products" />
-        <div className="products grid grid-cols-3 justify-around gap-2 my-20 place-items-center px-48">
+        <div className="products grid grid-cols-3 justify-around gap-2 mt-20 -mb-24 place-items-center px-48">
           <ProductCard />
           <ProductCard />
           <ProductCard />
