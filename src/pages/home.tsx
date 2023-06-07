@@ -5,10 +5,14 @@ import Card from "@/components/Card";
 import classNames from "classnames";
 import TitleText from "@/components/TitleText";
 import ProductCard from "@/components/ProductCard";
+import Head from "next/head";
 
 const Home = () => {
   return (
     <>
+      <Head>
+        <title> Home | Logo Electronics</title>
+      </Head>
       <div className="main-bg-wrapper">
         <TitleText text="Logo Electronics" />
         <div className="flex items-center justify-center text-center py-4 pt-8">

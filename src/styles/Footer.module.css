@@ -1,0 +1,36 @@
+.footer_image_section {
+  width: 100vw;
+  height: 40vh;
+  position: relative;
+}
+
+.footer_image_section .footer_image {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  /* filter: blur(2px); */
+}
+
+.gradient_font {
+  background: linear-gradient(
+    90deg,
+    #920aa8 2%,
+    #e019cc 20%,
+    #ff81e3 48%,
+    #fc75d6 52%,
+    #df55f6 60%,
+    #e822ec 71%,
+    #e80f91 75%,
+    #ee19d8 81.25%,
+    #f323b7 87.5%,
+    #fe3873 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
