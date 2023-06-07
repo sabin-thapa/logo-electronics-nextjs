@@ -2,8 +2,12 @@ import Image from "next/image";
 import styles from "@/styles/Footer.module.css";
 import classNames from "classnames";
 import SubHeader from "./SubHeader";
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
+  const faintFooterStyle =
+    "uppercase font-poppins text-[#D4C9C9] text-xl tracking-widest py-2";
+
   return (
     <div className="relative">
       <div className={styles.footer_image_section}>
@@ -23,7 +27,7 @@ const Footer = () => {
         />
       </div>
 
-      <div className="absolute inset-0 flex flex-col justify-center">
+      <div className="absolute inset-0 flex flex-col justify-center ">
         <div className="grid grid-cols-3 justify-around gap-36 place-ite">
           <div className="text-white mx-4 flex-grow pl-20">
             <Image
@@ -40,16 +44,33 @@ const Footer = () => {
               text ever since the 1500s, when
             </p>
           </div>
-          <div className="text-white mx-4 flex-grow">
+          <div className="text-white mx-4 flex-grow ">
             <SubHeader text="Useful Links" className="mt-4" />
-            <h1 className="uppercase font-poppins">Home</h1>
-            <h1 className="uppercase font-poppins">Product</h1>
-            <h1 className="uppercase font-poppins">About us</h1>
-            <h1 className="uppercase font-poppins">contact</h1>
+            <div className="flex flex-col pl-7 ">
+              <h1 className={faintFooterStyle}>Home</h1>
+              <h1 className={faintFooterStyle}>Product</h1>
+              <h1 className={faintFooterStyle}>About us</h1>
+              <h1 className={faintFooterStyle}>contact</h1>
+            </div>
           </div>
-          <div className="text-white mx-4 flex-grow">
-            <h3 className="text-lg font-semibold">Column 3</h3>
-            <p>Text for column 3</p>
+          <div className="text-white mx-4 flex-grow relative">
+            <Image
+              src="/assets/follow_bg.svg"
+              height={340}
+              width={320}
+              alt="follow us"
+            />
+            <div className="absolute top-4 left-20   ">
+              <div className="relative">
+                <SubHeader text="Follow Us On" fontColor="#fff" />
+              </div>
+            </div>
+            <div className="flex gap-14 mt-6">
+              <FaFacebook size={48} />
+              <FaInstagram size={48} />
+              <FaTwitter size={48} />
+              <FaYoutube size={48} />
+            </div>
           </div>
         </div>
       </div>
