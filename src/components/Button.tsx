@@ -5,7 +5,8 @@ import React from "react";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   fontColor?: string;
   borderWidth?: string;
-  bolderBorder?: boolean
+  bolderBorder?: boolean;
+  bespax?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -14,21 +15,23 @@ const Button: React.FC<ButtonProps> = ({
   fontColor,
   borderWidth,
   bolderBorder,
+  bespax,
   ...props
 }) => {
-
   const buttonStyles = {
     color: fontColor,
-    borderWidth: borderWidth
-  }
+    borderWidth: borderWidth,
+  };
 
   return (
     <button
       className={classNames(
         styles.btn,
-        "text-white px-6 py-2 font-poppins font-bold text-lg",
+        `text-white px-6 py-1  font-bold text-2xl rounded-full`,
         { [styles.gradient_font]: !fontColor },
-        {[styles.bolder_border]: bolderBorder},
+        { [styles.bolder_border]: bolderBorder },
+        { "font-bespax": bespax },
+        { "font-poppins": !bespax },
         className
       )}
       style={buttonStyles}

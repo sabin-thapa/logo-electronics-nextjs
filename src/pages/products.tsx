@@ -6,47 +6,15 @@ import classNames from "classnames";
 import TitleText from "@/components/TitleText";
 import ProductCard from "@/components/ProductCard";
 import Head from "next/head";
-import ViewButton from "@/components/ViewButton";
 
-const Home = () => {
+const Products = () => {
   return (
     <>
       <Head>
-        <title> Home | Logo Electronics</title>
+        <title> Products | Logo Electronics</title>
       </Head>
-      <div className="main-bg-wrapper">
-        <TitleText text="Logo Electronics" />
-        <div className="flex items-center justify-center text-center py-4 pt-8">
-          <div
-            className={`w-40 h-[10px] bg-gray-400 ${styles.gradient_text} rounded-md`}
-          ></div>
-
-          <h3
-            className={`uppercase font-bespax text-center text-white  tracking-widest text-2xl mx-6 `}
-          >
-            The Techies You Love
-          </h3>
-
-          <div
-            className={`w-40 h-[10px] bg-gray-400 ${styles.gradient_text} rounded-md`}
-          ></div>
-        </div>
-        <div className="flex justify-center py-16">
-          <Button
-            className="flex justify-between items-center w-[30rem] py-6 rounded-full text-white font-bespax uppercase tracking-widest"
-            fontColor="#fff"
-            bolderBorder={true}
-            bespax
-          >
-            <span> View All Products </span>
-            <Image
-              src="/assets/right_arrow.png"
-              width={36}
-              height={36}
-              alt="right arrow"
-            />
-          </Button>
-        </div>
+      <div className="products-page-bg-wrapper">
+        <TitleText text="Products" />
       </div>
       <div
         className={classNames(
@@ -92,4 +60,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Products;
