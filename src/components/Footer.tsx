@@ -47,7 +47,7 @@ const Footer = () => {
                 priority={true}
               />
 
-              <p className="font-poppins mt-12 font-normal tracking-[0.25em] leading-7">
+              <p className="font-poppins mt-8 font-normal tracking-[0.25em] leading-7">
                 lOGO is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry&#39;s standard dummy
                 text ever since the 1500s, when
@@ -62,7 +62,7 @@ const Footer = () => {
                 <h1 className={faintFooterStyle}>contact</h1>
               </div>
             </div>
-            <div className="text-white mx-4 flex-grow relative">
+            <div className="text-white mx-4 mt-12 flex-grow relative">
               <Image
                 src="/assets/follow_bg.svg"
                 height={200}
