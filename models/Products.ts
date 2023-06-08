@@ -3,7 +3,7 @@ export interface Product {
   title: string;
   description: string;
   price: number;
-  discountPercentage: number;
+  discountPercentage?: number;
   rating: number;
   stock: number;
   brand: string;
@@ -12,6 +12,9 @@ export interface Product {
   images: string[];
 }
 
-export interface ProductResponse {
+export interface ProductsResponse {
   products: Product[];
+}
+export interface ProductResponse {
+  product: Product;
 }
