@@ -6,9 +6,27 @@ import classNames from "classnames";
 import TitleText from "@/components/TitleText";
 import ProductCard from "@/components/ProductCard";
 import Head from "next/head";
-import ViewButton from "@/components/ViewButton";
+import { GetServerSideProps } from "next";
+import { Product, ProductResponse } from "../../models/Products";
 
-const Home = () => {
+export interface ProductsPageProps {
+  products: Product[];
+}
+
+export const getServerSideProps: GetServerSideProps<
+  ProductsPageProps
+> = async () => {
+  const response = await fetch("https://dummyjson.com/products");
+  const productsResponse: ProductResponse = await response.json();
+  return {
+    props: {
+      products: productsResponse.products,
+    },
+  };
+};
+
+const Home = ({ products }: ProductsPageProps) => {
+  const selectedProducts = products.slice(0, 4);
   return (
     <>
       <Head>
@@ -50,7 +68,7 @@ const Home = () => {
       </div>
       <div
         className={classNames(
-          "-mt-56 grid grid-cols-6 gap-x-[24rem] place-items-center",
+          "-mt-64 grid grid-cols-6 gap-x-[24rem] place-items-center",
           styles.card_section
         )}
       >
@@ -62,10 +80,9 @@ const Home = () => {
             alt="left arrow"
           />
         </div>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {selectedProducts.map((product, index) => (
+          <Card product={product} key={index} />
+        ))}
 
         <div className="-ml-96">
           <Image
@@ -80,12 +97,9 @@ const Home = () => {
       <div className="products-section">
         <TitleText text="Products" />
         <div className="products grid grid-cols-3 justify-around gap-2 mt-20 -mb-24 place-items-center px-48">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          {products.map((product, index) => (
+            <ProductCard product={product} key={index} />
+          ))}
         </div>
       </div>
     </>

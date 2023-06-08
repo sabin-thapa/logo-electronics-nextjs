@@ -4,12 +4,19 @@ import styles from "@/styles/Card.module.css";
 import { AiOutlineHeart } from "react-icons/ai";
 import Button from "./Button";
 import ViewButton from "./ViewButton";
+import { Product } from "../../models/Products";
 
-const ProductCard = () => {
+export interface ProductProps {
+  product: Product;
+}
+
+const ProductCard = ({
+  product: { brand, title, price, thumbnail, rating },
+}: ProductProps) => {
   return (
     <div
       className={classNames(
-        "w-[22rem] max-w-[22rem] min-h-[32rem] bg-white rounded-3xl mb-32"
+        "w-[24rem] max-w-[24rem] min-h-[38rem] bg-white rounded-3xl mb-32 relative"
       )}
     >
       <div className="flex justify-between py-5 px-5">
@@ -23,22 +30,22 @@ const ProductCard = () => {
         </h1>
         <AiOutlineHeart size={40} />
       </div>
-      <a href="#" className="flex items-center justify-center">
+      <a href="#" className="flex items-center justify-center h-72">
         <Image
-          className="rounded-t-lg flex pt-1"
-          src="/assets/desktop.png"
+          className="rounded-t-lg flex pt-1 w-full object-contain h-full"
+          src={thumbnail}
           width={250}
-          height={300}
+          height={500}
           alt="card image"
         />
       </a>
-      <div className="p-5">
+      <div className="p-5 absolute bottom-5 w-96">
         <a href="#">
-          <h3 className="mb-2 text-4xl text-center font-poppins font-normal">
-            Headphone-128K
+          <h3 className=" text-2xl text-center font-poppins font-medium">
+            {title}
           </h3>
         </a>
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-8 ">
           <ViewButton
             className={classNames(
               "flex justify-around px-14 mx-1 items-center w-full py-4 text-white font-bespax uppercase"
