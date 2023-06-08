@@ -25,6 +25,7 @@ const Products = () => {
 
       <div className="products-section">
         <div className="products grid grid-cols-3 justify-around gap-2 mt-20 -mb-24 place-items-center px-48">
+          {/* <ProductCard />
           <ProductCard />
           <ProductCard />
           <ProductCard />
@@ -32,8 +33,7 @@ const Products = () => {
           <ProductCard />
           <ProductCard />
           <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          <ProductCard /> */}
         </div>
       </div>
     </>
