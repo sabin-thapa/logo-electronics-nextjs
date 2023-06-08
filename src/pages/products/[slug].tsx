@@ -7,6 +7,8 @@ import Head from "next/head";
 import React from "react";
 import styles from "@/styles/Products.module.css";
 import ProductDetailCard from "@/components/ProductDetailCard";
+import ImageContainer from "@/components/ImageContainer";
+import Image from "next/image";
 
 const ProductDetail = () => {
   return (
@@ -25,6 +27,28 @@ const ProductDetail = () => {
         <div className="flex justify-center items-center">
           <ProductDetailCard />
         </div>
+      </div>
+
+      <div className="flex justify-center gap-8">
+        <ImageContainer className="pb-8" />
+        <ImageContainer className="pb-8" />
+        <ImageContainer className="pb-8" />
+        <ImageContainer className="pb-8" />
+      </div>
+
+      <div className="flex justify-center gap-12 pt-16 pb-64">
+        <Image
+          src="/assets/left_arrow.png"
+          width={50}
+          height={50}
+          alt="left arrow"
+        />
+        <Image
+          src="/assets/right_arrow.png"
+          width={50}
+          height={50}
+          alt="right arrow"
+        />
       </div>
     </>
   );
