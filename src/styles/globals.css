@@ -10,6 +10,7 @@
 
 body {
   background-color: #26072C;
+overflow-x: hidden;
 }
 
 .main-bg-wrapper {

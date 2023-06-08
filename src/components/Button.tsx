@@ -44,12 +44,12 @@ const Button: React.FC<ButtonProps> = ({
     <button
       className={classNames(
         styles.btn,
+        className,
         `text-white px-6 py-1  font-bold text-2xl rounded-full`,
-        { [styles.gradient_font]: !fontColor || accordion },
+        { [styles.gradient_font]: !fontColor },
         { [styles.bolder_border]: bolderBorder },
         { "font-bespax": bespax },
-        { "font-poppins": !bespax },
-        className
+        { "font-poppins": !bespax }
       )}
       style={buttonStyles}
       {...props}
@@ -59,11 +59,11 @@ const Button: React.FC<ButtonProps> = ({
         <div ref={contentRef} className="absolute flex">
           <ul
             className={classNames(
-              "pb-12 pt-12  flex flex-col gap-2",
+              "pb-12 pt-12   flex flex-col gap-2 ",
               styles.gradient_font
             )}
           >
-            <li className="px-2 py-1">Mouse</li>
+            <li className="px-2 py-1 ">Mouse</li>
             <li className="px-2 py-1">Keyboard</li>
             <li className="px-2 py-1">Monitor</li>
           </ul>
