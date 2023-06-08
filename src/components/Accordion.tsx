@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Transition } from "@headlessui/react";
-import ViewButton from "./ViewButton";
 import classNames from "classnames";
 import Button from "./Button";
+import Image from "next/image";
 
 const Accordion = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,18 +13,24 @@ const Accordion = () => {
   const products = ["Mouse", "Keyboard", "Monitor"];
 
   return (
-    <div className="relative">
+    <div>
       <Button
         onClick={toggleAccordion}
         className={classNames(
-          "flex justify-around px-14 mx-1 items-start w-full py-4  text-white font-bespax uppercase",
-          { "bg-gray-200": isOpen }
+          "flex justify-around px-14  w-full mx-6 py-6 bg-white font-bespax"
         )}
-        fontColor="#000"
         isExpanded={isOpen}
         accordion
       >
-        Products
+        All Products
+        <span className="pt-2 pl-4">
+          <Image
+            src="/assets/arrow_down.svg"
+            alt="arrow down"
+            height={24}
+            width={24}
+          />
+        </span>
       </Button>
     </div>
   );
