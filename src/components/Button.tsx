@@ -1,6 +1,6 @@
 import styles from "@/styles/Button.module.css";
 import classNames from "classnames";
-import React, { useEffect, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   fontColor?: string;
@@ -9,6 +9,9 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   bespax?: boolean;
   isExpanded?: boolean;
   accordion?: boolean;
+  children?: ReactNode;
+  data?: string[];
+  contentHeight?: number;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -20,19 +23,11 @@ const Button: React.FC<ButtonProps> = ({
   isExpanded,
   bespax,
   accordion,
+  contentHeight,
+  data,
   ...props
 }) => {
-  const [contentHeight, setContentHeight] = useState<number | undefined>(0);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (isExpanded) {
-      const height = contentRef.current?.scrollHeight;
-      setContentHeight(height);
-    } else {
-      setContentHeight(undefined);
-    }
-  }, [isExpanded]);
+  // const [contentHeight, setContentHeight] = useState<number | undefined>(0);
 
   const buttonStyles = {
     color: fontColor,
@@ -42,10 +37,11 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
+      onClick={props.onClick}
       className={classNames(
         styles.btn,
         className,
-        `text-white px-6 py-1  font-bold text-2xl rounded-full`,
+        `text-white px-8 py-1 font-bold text-2xl rounded-full`,
         { [styles.gradient_font]: !fontColor },
         { [styles.bolder_border]: bolderBorder },
         { "font-bespax": bespax },
@@ -55,20 +51,6 @@ const Button: React.FC<ButtonProps> = ({
       {...props}
     >
       {children}
-      {isExpanded && (
-        <div ref={contentRef} className="absolute flex">
-          <ul
-            className={classNames(
-              "pb-12 pt-12   flex flex-col gap-2 ",
-              styles.gradient_font
-            )}
-          >
-            <li className="px-2 py-1 ">Mouse</li>
-            <li className="px-2 py-1">Keyboard</li>
-            <li className="px-2 py-1">Monitor</li>
-          </ul>
-        </div>
-      )}
     </button>
   );
 };
