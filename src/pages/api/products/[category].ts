@@ -13,7 +13,7 @@ export default async function handler(
     );
 
     const data = await response.json();
-    const products: Product[] = data.products;
+    const products: Product[] = data;
     console.log(products);
     res.status(200).json(products);
   } catch (error) {
