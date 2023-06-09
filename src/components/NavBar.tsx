@@ -18,7 +18,7 @@ const NavBar = () => {
         <Link href="/">
           <Button className="w-32 mr-10">Home</Button>
         </Link>
-        <Link href="/">
+        <Link href="/products">
           <Button className="w-40">Products</Button>
         </Link>
       </div>
