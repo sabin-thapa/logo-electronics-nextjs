@@ -67,6 +67,7 @@ export const getStaticProps: GetStaticProps<ProductDetailProps> = async ({
 };
 
 const ProductDetail = ({ product }: ProductDetailProps) => {
+  const productImages = product.images.slice(0, 4);
   return (
     <>
       <Head>
@@ -86,10 +87,9 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
       </div>
 
       <div className="flex justify-center gap-8">
-        <ImageContainer className="pb-8" image={product.thumbnail} />
-        <ImageContainer className="pb-8" image={product.thumbnail} />
-        <ImageContainer className="pb-8" image={product.thumbnail} />
-        <ImageContainer className="pb-8" image={product.thumbnail} />
+        {productImages.map((product, index) => (
+          <ImageContainer key={index} image={product} longCard />
+        ))}
       </div>
 
       <div className="flex justify-center gap-12 pt-16 pb-64">
