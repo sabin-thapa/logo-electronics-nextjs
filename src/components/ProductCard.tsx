@@ -5,13 +5,14 @@ import { AiOutlineHeart } from "react-icons/ai";
 import Button from "./Button";
 import ViewButton from "./ViewButton";
 import { Product } from "../../models/Products";
+import Link from "next/link";
 
 export interface ProductProps {
   product: Product;
 }
 
 const ProductCard = ({
-  product: { brand, title, price, thumbnail, rating },
+  product: { id, brand, title, price, thumbnail, rating },
 }: ProductProps) => {
   return (
     <div
@@ -45,23 +46,25 @@ const ProductCard = ({
             {title}
           </h3>
         </a>
-        <div className="flex justify-center mt-8 ">
-          <ViewButton
-            className={classNames(
-              "flex justify-around px-14 mx-1 items-center w-full py-4 text-white font-bespax uppercase"
-            )}
-            fontColor="#000"
-          >
-            <span className="text-2xl tracking-widest"> View </span>
-            <Image
-              src="/assets/black_right_arrow.png"
-              width={40}
-              height={40}
-              alt="right arrow"
-              color="#000"
-            />
-          </ViewButton>
-        </div>
+        <Link href={`/products/${id}`}>
+          <div className="flex justify-center mt-8 ">
+            <ViewButton
+              className={classNames(
+                "flex justify-around px-14 mx-1 items-center w-full py-4 text-white font-bespax uppercase"
+              )}
+              fontColor="#000"
+            >
+              <span className="text-2xl tracking-widest"> View </span>
+              <Image
+                src="/assets/black_right_arrow.png"
+                width={40}
+                height={40}
+                alt="right arrow"
+                color="#000"
+              />
+            </ViewButton>
+          </div>
+        </Link>
       </div>
     </div>
   );
