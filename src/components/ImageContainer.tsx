@@ -5,17 +5,35 @@ import classNames from "classnames";
 
 interface ContainerProps {
   className?: string;
+  image: string;
+  longCard?: boolean;
 }
 
-const ImageContainer: React.FC<ContainerProps> = ({ className }) => {
+const ImageContainer: React.FC<ContainerProps> = ({
+  className,
+  image,
+  longCard,
+}: ContainerProps) => {
   return (
-    <div className={classNames(styles.card, "my-8 ml-8 pl-6 pb-14 bg-grayish")}>
-      <div className={classNames("pt-16", className)}>
+    <div
+      className={classNames(
+        styles.card,
+        "bg-grayish",
+        {
+          "my-8 ml-8 w-full ": !longCard,
+        },
+        {
+          " h-96 w-72  ": longCard,
+        }
+      )}
+    >
+      <div className={classNames("overflow-hidden h-full flex")}>
         <Image
-          src="/assets/desktop.png"
+          src={image}
           height={400}
-          width={300}
+          width={400}
           alt="Product Image"
+          className="object-contain"
         />
       </div>
     </div>

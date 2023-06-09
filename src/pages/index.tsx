@@ -7,7 +7,7 @@ import TitleText from "@/components/TitleText";
 import ProductCard from "@/components/ProductCard";
 import Head from "next/head";
 import { GetServerSideProps } from "next";
-import { Product, ProductResponse } from "../../models/Products";
+import { Product, ProductsResponse } from "../../models/Products";
 
 export interface ProductsPageProps {
   products: Product[];
@@ -17,7 +17,7 @@ export const getServerSideProps: GetServerSideProps<
   ProductsPageProps
 > = async () => {
   const response = await fetch("https://dummyjson.com/products");
-  const productsResponse: ProductResponse = await response.json();
+  const productsResponse: ProductsResponse = await response.json();
   return {
     props: {
       products: productsResponse.products,
