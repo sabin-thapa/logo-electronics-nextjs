@@ -8,6 +8,7 @@ import ProductCard from "@/components/ProductCard";
 import Head from "next/head";
 import { GetServerSideProps } from "next";
 import { Product, ProductsResponse } from "../../models/Products";
+import { useState } from "react";
 
 export interface ProductsPageProps {
   products: Product[];
@@ -27,6 +28,16 @@ export const getServerSideProps: GetServerSideProps<
 
 const Home = ({ products }: ProductsPageProps) => {
   const selectedProducts = products.slice(0, 4);
+  const [isBtnHovered, setIsBtnHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsBtnHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsBtnHovered(false);
+  };
+
   return (
     <>
       <Head>
@@ -53,11 +64,15 @@ const Home = ({ products }: ProductsPageProps) => {
         </div>
         <div className="flex justify-center py-16">
           <Button
-            className="flex justify-between items-center w-[34rem] py-6 rounded-full text-white font-bespax text-xl font-medium uppercase tracking-widest"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className="flex justify-between items-center w-[34rem] py-6 rounded-full text-white font-bespax font-medium uppercase tracking-widest"
             fontColor="#fff"
             bolderBorder={true}
             bespax
             active="true"
+            animated
+            hovered={isBtnHovered}
           >
             <span> View All Products </span>
             <Image
@@ -65,6 +80,7 @@ const Home = ({ products }: ProductsPageProps) => {
               width={36}
               height={36}
               alt="right arrow"
+              className={isBtnHovered ? styles.btn_arrow : ""}
             />
           </Button>
         </div>

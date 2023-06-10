@@ -44,3 +44,16 @@
 /* .card_section {
     margin-top: -300px;
 } */
+
+.btn_arrow {
+  animation: move 1s steps(40, end);
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-1300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
