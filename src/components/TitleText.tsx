@@ -1,7 +1,6 @@
 import styles from "@/styles/Home.module.css";
 import classNames from "classnames";
 import { useEffect, useState } from "react";
-import Typed from "react-typed";
 
 type TitleTextProps = {
   text: string;
@@ -22,16 +21,10 @@ const TitleText = ({ text, textStroke }: TitleTextProps) => {
     <h1
       className={classNames(
         `font-routhem text-pinky text-6xl text-left pt-48`,
-        { [styles.title_text]: textStroke && typingComplete }
+        { [styles.title_text]: textStroke && !typingComplete }
       )}
     >
-      <Typed
-        strings={[text]}
-        typeSpeed={500}
-        loop
-        cursorChar=""
-        onComplete={handleTypingComplete}
-      />
+      {text}
     </h1>
   );
 };

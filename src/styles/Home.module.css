@@ -1,10 +1,43 @@
 .gradient_text {
-    background-image: linear-gradient(90deg, #A8620A 2%, #E09519 20%, #FFE581 48%, #FCDC75 52%, #F6C755 60%, #ECA522 71%, #E8980F 75%, #FEB838 100%);
+  background-image: linear-gradient(
+    90deg,
+    #a8620a 2%,
+    #e09519 20%,
+    #ffe581 48%,
+    #fcdc75 52%,
+    #f6c755 60%,
+    #eca522 71%,
+    #e8980f 75%,
+    #feb838 100%
+  );
 }
 
 .title_text {
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 800px;
+  animation: type 4s steps(40, end) infinite;
+  -webkit-text-stroke: 1px transparent ;
+  -webkit-text-stroke-color: #e2e53c;
+  animation-delay: 5s;
+    border: none;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  1%,
+  90% {
+    border-right: none;
+    -webkit-text-stroke: 1px transparent ;
+  }
+  91%, 100% {
+    border-right: none;
     -webkit-text-stroke: 1px #fff;
-    -webkit-text-stroke-color: #E2E53C;
+    -webkit-text-stroke-color: #e2e53c;
+  }
 }
 
 /* .card_section {
