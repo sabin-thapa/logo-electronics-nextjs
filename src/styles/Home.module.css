@@ -17,11 +17,11 @@
   white-space: nowrap;
   overflow: hidden;
   width: 800px;
-  animation: type 4s steps(40, end) infinite;
-  -webkit-text-stroke: 1px transparent ;
+  animation: type 8s steps(40, end) infinite;
+  -webkit-text-stroke: 1px transparent;
   -webkit-text-stroke-color: #e2e53c;
   animation-delay: 5s;
-    border: none;
+  border: none;
 }
 
 @keyframes type {
@@ -31,9 +31,10 @@
   1%,
   90% {
     border-right: none;
-    -webkit-text-stroke: 1px transparent ;
+    -webkit-text-stroke: 1px transparent;
   }
-  91%, 100% {
+  91%,
+  100% {
     border-right: none;
     -webkit-text-stroke: 1px #fff;
     -webkit-text-stroke-color: #e2e53c;

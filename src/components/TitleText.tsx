@@ -8,20 +8,11 @@ type TitleTextProps = {
 };
 
 const TitleText = ({ text, textStroke }: TitleTextProps) => {
-  const [typingComplete, setTypingComplete] = useState(false);
-
-  const handleTypingComplete = () => {
-    setTimeout(() => {
-      setTypingComplete(false);
-    }, 800);
-    setTypingComplete(true);
-  };
-
   return (
     <h1
       className={classNames(
-        `font-routhem text-pinky text-6xl text-left pt-48`,
-        { [styles.title_text]: textStroke && !typingComplete }
+        `font-routhem text-pinky text-6xl text-center pt-48`,
+        { [styles.title_text]: textStroke }
       )}
     >
       {text}

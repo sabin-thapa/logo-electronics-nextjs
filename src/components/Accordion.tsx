@@ -46,6 +46,7 @@ const Accordion: React.FC<AccordionProps> = ({
         isExpanded={isOpen}
         accordion
         contentHeight={contentHeight}
+        active="true"
       >
         All Products
         <span className="pt-2 pl-4">

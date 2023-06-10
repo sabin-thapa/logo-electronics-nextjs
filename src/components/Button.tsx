@@ -12,6 +12,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
   data?: string[];
   contentHeight?: number;
+  active?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -24,6 +25,7 @@ const Button: React.FC<ButtonProps> = ({
   bespax,
   accordion,
   contentHeight,
+  active,
   data,
   ...props
 }) => {
@@ -39,10 +41,12 @@ const Button: React.FC<ButtonProps> = ({
     <button
       onClick={props.onClick}
       className={classNames(
-        styles.btn,
+        { [styles.btn]: active },
+        { [styles.btn_white]: active === "" },
         className,
         `text-white px-8 py-1 font-bold text-2xl rounded-full`,
-        { [styles.gradient_font]: !fontColor },
+        { [styles.gradient_font]: !fontColor && active },
+        { "text-white": active === "" },
         { [styles.bolder_border]: bolderBorder },
         { "font-bespax": bespax },
         { "font-poppins": !bespax }

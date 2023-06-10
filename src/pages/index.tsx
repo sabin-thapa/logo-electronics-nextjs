@@ -53,10 +53,11 @@ const Home = ({ products }: ProductsPageProps) => {
         </div>
         <div className="flex justify-center py-16">
           <Button
-            className="flex justify-between items-center w-[30rem] py-6 rounded-full text-white font-bespax uppercase tracking-widest"
+            className="flex justify-between items-center w-[34rem] py-6 rounded-full text-white font-bespax text-xl font-medium uppercase tracking-widest"
             fontColor="#fff"
             bolderBorder={true}
             bespax
+            active="true"
           >
             <span> View All Products </span>
             <Image

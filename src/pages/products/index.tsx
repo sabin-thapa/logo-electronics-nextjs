@@ -76,7 +76,7 @@ const Products = () => {
       <div className={classNames(styles.products_page_bg_wrapper, "pt-16")}>
         <TitleText text="Products" />
       </div>
-      <div className="flex py-24 mb-36 h-72 justify-around items-center">
+      <div className="flex py-24 mb-36 mt-14 h-72 justify-around items-center">
         <SubHeader
           text={selectedCategory ? `>> ${selectedCategory}` : ">> All Products"}
           fontColor="#fff"
