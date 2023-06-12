@@ -46,23 +46,15 @@ const Home = ({ products }: ProductsPageProps) => {
         <title> Home | Logo Electronics</title>
       </Head>
       <div className="main-bg-wrapper">
-        <div className="h-64 flex items-center mx-[40rem]">
+        <div className="h-64 flex items-center mx-auto max-w-[40rem]">
           <TitleText text="Logo Electronics" textStroke />
         </div>
         <div className="flex items-center justify-center text-center py-4 pt-8">
-          <div
-            className={`w-40 h-[10px] bg-gray-400 ${styles.gradient_text} rounded-md`}
-          ></div>
-
-          <h3
-            className={`uppercase font-bespax text-center text-white  tracking-widest text-2xl mx-6 `}
-          >
+          <div className="w-40 h-[10px] bg-gray-400 rounded-md"></div>
+          <h3 className="uppercase font-bespax text-center text-white tracking-widest text-2xl mx-6">
             The Techies You Love
           </h3>
-
-          <div
-            className={`w-40 h-[10px] bg-gray-400 ${styles.gradient_text} rounded-md`}
-          ></div>
+          <div className="w-40 h-[10px] bg-gray-400 rounded-md"></div>
         </div>
         <div className="flex justify-center py-16">
           <Button
@@ -92,12 +84,7 @@ const Home = ({ products }: ProductsPageProps) => {
           </Button>
         </div>
       </div>
-      <div
-        className={classNames(
-          "-mt-64 grid grid-cols-6 gap-x-[24rem] place-items-center",
-          styles.card_section
-        )}
-      >
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-x-[24rem] place-items-center">
         <div className="-mr-96">
           <Image
             src="/assets/left_arrow.png"
@@ -113,7 +100,6 @@ const Home = ({ products }: ProductsPageProps) => {
             isLastCard={index === selectedProducts.length - 1}
           />
         ))}
-
         <div className="-ml-96">
           <Image
             src="/assets/right_arrow.png"
@@ -123,10 +109,9 @@ const Home = ({ products }: ProductsPageProps) => {
           />
         </div>
       </div>
-
       <div className="products-section">
         <TitleText text="Products" />
-        <div className="products grid grid-cols-3 justify-around gap-2 mt-20 -mb-24 place-items-center px-48">
+        <div className="products grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 justify-around gap-2 mt-20 -mb-24 place-items-center px-8 md:px-48">
           {products.map((product, index) => (
             <ProductCard product={product} key={index} />
           ))}

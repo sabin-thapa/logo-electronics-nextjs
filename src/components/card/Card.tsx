@@ -41,8 +41,10 @@ const Card = ({
             {brand}
           </h3>
         </a>
-        <p className="mb-3 font-normal text-md font-poppins ">{title}</p>
-        <p className="mb-3 font-bold font-poppins">${price}</p>
+        <p className="mb-3 font-normal text-md text-normal font-poppins ">
+          {title}
+        </p>
+        <p className="mb-3 font-bold font-poppins text-normal">${price}</p>
         <div className=" flex justify-between items-center">
           <div className=" flex pr-2">
             <StarIcon size={30} hasGradient={true} />
@@ -51,7 +53,7 @@ const Card = ({
             <StarIcon size={30} hasGradient={true} />
             <StarIcon size={30} />
           </div>
-          <p className="text-slate-500 mr-10"> (20)</p>
+          <p className="text-grayish mr-10"> (20)</p>
         </div>
       </div>
     </motion.div>
