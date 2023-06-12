@@ -83,7 +83,7 @@
   mask-composite: exclude;
 }
 
-.view_btn {
+/* .view_btn {
   background: linear-gradient(
       90deg,
       #920aa8 2%,
@@ -97,7 +97,7 @@
       #f323b7 87.5%,
       #fe3873 100%
     )
-}
+} */
 
 .dropdownContainer {
   position: absolute;

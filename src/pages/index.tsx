@@ -79,9 +79,13 @@ const Home = ({ products }: ProductsPageProps) => {
           >
             <span> View All Products </span>
             <Image
-              src="/assets/right_arrow.png"
-              width={36}
-              height={36}
+              src={
+                isBtnHovered
+                  ? "/assets/right_arrow_white.png"
+                  : "/assets/right_arrow.png"
+              }
+              width={38}
+              height={38}
               alt="right arrow"
               className={isBtnHovered ? styles.btn_arrow : ""}
             />

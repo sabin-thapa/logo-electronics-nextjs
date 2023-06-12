@@ -97,10 +97,42 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex gap-9 mt-6">
-                <FaFacebook size={48} />
-                <FaInstagram size={48} />
-                <FaTwitter size={48} />
-                <FaYoutube size={48} />
+                <motion.div whileHover={{ scale: 1.4, color: "#1877f2" }}>
+                  <FaFacebook
+                    size={48}
+                    className={classNames(
+                      styles.socialIcon,
+                      styles.facebookIcon
+                    )}
+                  />
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.4, color: "#d62976" }}>
+                  <FaInstagram
+                    size={48}
+                    className={classNames(
+                      styles.socialIcon,
+                      styles.instagramIcon
+                    )}
+                  />
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.4, color: "#1da1f2" }}>
+                  <FaTwitter
+                    size={48}
+                    className={classNames(
+                      styles.socialIcon,
+                      styles.twitterIcon
+                    )}
+                  />
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.4, color: "red" }}>
+                  <FaYoutube
+                    size={48}
+                    className={classNames(
+                      styles.socialIcon,
+                      styles.youtubeIcon
+                    )}
+                  />
+                </motion.div>
               </div>
             </div>
           </div>

@@ -34,3 +34,16 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.instagram-icon {
+  transition: transform 0.2s;
+}
+
+.instagram-icon:hover {
+  mask: url(#instagram-mask);
+  -webkit-mask: url(#instagram-mask);
+  background-image: linear-gradient(45deg, #fd5d93, #ec008c, #772ef8, #1890ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
