@@ -3,20 +3,42 @@ import styles from "@/styles/Footer.module.css";
 import classNames from "classnames";
 import SubHeader from "./SubHeader";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Footer = () => {
+  const handleScrollToTop = () => {
+    const scrollStep = -window.scrollY / (2000 / 15); //
+    const scrollInterval = setInterval(() => {
+      if (window.scrollY !== 0) {
+        window.scrollBy(0, scrollStep);
+      } else {
+        clearInterval(scrollInterval);
+      }
+    }, 15);
+  };
   const faintFooterStyle =
     "uppercase font-poppins text-[#D4C9C9] text-xl tracking-widest py-2";
 
   return (
     <>
       <div className="flex justify-end mr-36 -mb-24 z-10 relative">
-        <Image
-          src="/assets/rocket.svg"
-          alt="Rocket Image"
-          width={100}
-          height={50}
-        />
+        <motion.div
+          // variants={buttonVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition={{ duration: 0.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={handleScrollToTop}
+        >
+          <Image
+            className="cursor-pointer"
+            src="/assets/rocket.svg"
+            alt="Rocket Image"
+            width={100}
+            height={50}
+          />
+        </motion.div>
       </div>
       <div className="relative">
         <div className={styles.footer_image_section}>
