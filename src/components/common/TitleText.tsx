@@ -1,6 +1,5 @@
 import styles from "@/styles/Home.module.css";
 import classNames from "classnames";
-import { useEffect, useState } from "react";
 
 type TitleTextProps = {
   text: string;

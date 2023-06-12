@@ -1,7 +1,6 @@
 import styles from "@/styles/Button.module.css";
-import homeStyles from "@/styles/Home.module.css";
 import classNames from "classnames";
-import React, { ReactNode, useEffect, useRef, useState } from "react";
+import React, { ReactNode } from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   fontColor?: string;

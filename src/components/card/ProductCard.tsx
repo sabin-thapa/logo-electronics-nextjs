@@ -2,7 +2,6 @@ import classNames from "classnames";
 import Image from "next/image";
 import styles from "@/styles/Card.module.css";
 import { AiOutlineHeart } from "react-icons/ai";
-import Button from "../button/Button";
 import ViewButton from "../button/ViewButton";
 import { Product } from "../../../models/Products";
 import Link from "next/link";
