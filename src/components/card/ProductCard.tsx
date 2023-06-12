@@ -8,6 +8,7 @@ import Link from "next/link";
 
 export interface ProductProps {
   product: Product;
+  isLastCard?: boolean;
 }
 
 const ProductCard = ({

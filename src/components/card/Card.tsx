@@ -3,24 +3,28 @@ import Image from "next/image";
 import styles from "@/styles/Card.module.css";
 import StarIcon from "../common/StarIcon";
 import { ProductProps } from "./ProductCard";
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const Card = ({
   product: { brand, title, price, thumbnail },
+  isLastCard,
 }: ProductProps) => {
-  const cardRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const card = cardRef.current;
-    if (card) {
-      card.style.animation = `${styles.circularMotion} 4s infinite linear`;
-    }
-  }, []);
   return (
-    <div
+    <motion.div
       className={classNames(
         styles.card,
         "w-72 max-w-[18rem] h-96 bg-white relative"
       )}
+      initial={{ x: 0 }}
+      animate={!isLastCard ? { x: "120%" } : { x: "-400%" }}
+      exit={{ x: "100%" }}
+      transition={{
+        duration: 1,
+        repeat: Infinity,
+        repeatType: "loop",
+        delay: 1,
+        repeatDelay: 1,
+      }}
     >
       <a href="#" className="flex items-center justify-center h-48">
         <Image
@@ -50,7 +54,7 @@ const Card = ({
           <p className="text-slate-500 mr-10"> (20)</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

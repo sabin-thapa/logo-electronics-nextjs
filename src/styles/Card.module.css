@@ -106,9 +106,15 @@
 
 @keyframes circularMotion {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(25%);
+  }
+  75% {
+    transform: translateX(75%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(100%);
   }
 }

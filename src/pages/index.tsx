@@ -103,7 +103,11 @@ const Home = ({ products }: ProductsPageProps) => {
           />
         </div>
         {selectedProducts.map((product, index) => (
-          <Card product={product} key={index} />
+          <Card
+            product={product}
+            key={index}
+            isLastCard={index === selectedProducts.length - 1}
+          />
         ))}
 
         <div className="-ml-96">
