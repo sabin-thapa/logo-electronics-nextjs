@@ -5,7 +5,8 @@ import { AiOutlineHeart } from "react-icons/ai";
 import ViewButton from "../button/ViewButton";
 import { Product } from "../../../models/Products";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
+import { useState } from "react";
 export interface ProductProps {
   product: Product;
   isLastCard?: boolean;
@@ -14,6 +15,8 @@ export interface ProductProps {
 const ProductCard = ({
   product: { id, brand, title, price, thumbnail, rating },
 }: ProductProps) => {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <div
       className={classNames(
@@ -32,20 +35,29 @@ const ProductCard = ({
         <AiOutlineHeart size={40} />
       </div>
       <a href="#" className="flex items-center justify-center h-72">
-        <Image
-          className="rounded-t-lg flex pt-1 w-full object-contain h-full"
-          src={thumbnail}
-          width={250}
-          height={500}
-          alt="card image"
-        />
+        <motion.div
+          className="w-[80%] h-full"
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={() => setHovered(true)}
+          onHoverEnd={() => setHovered(false)}
+        >
+          <Image
+            className="rounded-t-lg flex pt-1 w-full object-contain h-full"
+            src={thumbnail}
+            width={250}
+            height={500}
+            alt="card image"
+          />
+        </motion.div>
       </a>
       <div className="p-5 absolute bottom-5 w-96">
-        <a href="#">
-          <h3 className=" text-2xl text-center font-poppins font-medium">
-            {title}
-          </h3>
-        </a>
+        {!hovered && (
+          <a href="#">
+            <h3 className=" text-2xl text-center font-poppins font-medium">
+              {title}
+            </h3>
+          </a>
+        )}
         <Link href={`/products/${id}`}>
           <div className="flex justify-center mt-8 ">
             <ViewButton
