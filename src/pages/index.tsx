@@ -1,14 +1,15 @@
-import Button from "@/components/Button";
+import Button from "@/components/button/Button";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
-import Card from "@/components/Card";
+import Card from "@/components/card/Card";
 import classNames from "classnames";
-import TitleText from "@/components/TitleText";
-import ProductCard from "@/components/ProductCard";
+import TitleText from "@/components/common/TitleText";
+import ProductCard from "@/components/card/ProductCard";
 import Head from "next/head";
 import { GetServerSideProps } from "next";
 import { Product, ProductsResponse } from "../../models/Products";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export interface ProductsPageProps {
   products: Product[];
@@ -27,6 +28,7 @@ export const getServerSideProps: GetServerSideProps<
 };
 
 const Home = ({ products }: ProductsPageProps) => {
+  const router = useRouter();
   const selectedProducts = products.slice(0, 4);
   const [isBtnHovered, setIsBtnHovered] = useState(false);
 
@@ -66,6 +68,7 @@ const Home = ({ products }: ProductsPageProps) => {
           <Button
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onClick={() => router.push(`/products`)}
             className="flex justify-between items-center w-[34rem] py-6 rounded-full text-white font-bespax font-medium uppercase tracking-widest"
             fontColor="#fff"
             bolderBorder={true}

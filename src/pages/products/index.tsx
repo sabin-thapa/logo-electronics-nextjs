@@ -1,13 +1,13 @@
-import Button from "@/components/Button";
+import Button from "@/components/button/Button";
 import styles from "@/styles/Products.module.css";
 import Image from "next/image";
-import Card from "@/components/Card";
+import Card from "@/components/card/Card";
 import classNames from "classnames";
-import TitleText from "@/components/TitleText";
-import ProductCard from "@/components/ProductCard";
+import TitleText from "@/components/common/TitleText";
+import ProductCard from "@/components/card/ProductCard";
 import Head from "next/head";
-import SubHeader from "@/components/SubHeader";
-import Accordion from "@/components/Accordion";
+import SubHeader from "@/components/common/SubHeader";
+import Accordion from "@/components/button/Accordion";
 import { useEffect, useState } from "react";
 import { Product } from "../../../models/Products";
 

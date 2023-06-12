@@ -1,13 +1,13 @@
-import Accordion from "@/components/Accordion";
-import ProductCard from "@/components/ProductCard";
-import SubHeader from "@/components/SubHeader";
-import TitleText from "@/components/TitleText";
+import Accordion from "@/components/button/Accordion";
+import ProductCard from "@/components/card/ProductCard";
+import SubHeader from "@/components/common/SubHeader";
+import TitleText from "@/components/common/TitleText";
 import classNames from "classnames";
 import Head from "next/head";
 import React from "react";
 import styles from "@/styles/Products.module.css";
-import ProductDetailCard from "@/components/ProductDetailCard";
-import ImageContainer from "@/components/ImageContainer";
+import ProductDetailCard from "@/components/card/ProductDetailCard";
+import ImageContainer from "@/components/common/ImageContainer";
 import Image from "next/image";
 import {
   GetStaticPaths,

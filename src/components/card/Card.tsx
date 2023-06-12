@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import Image from "next/image";
 import styles from "@/styles/Card.module.css";
-import StarIcon from "./StarIcon";
+import StarIcon from "../common/StarIcon";
 import { ProductProps } from "./ProductCard";
 import { useEffect, useRef } from "react";
 
