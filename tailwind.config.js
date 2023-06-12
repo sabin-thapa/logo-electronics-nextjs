@@ -11,6 +11,7 @@ module.exports = {
         pinky: "#F903AA",
         lightText: "#131313",
         normal: "0A0A0A",
+        grayishbg: "#E4E4E4",
         grayish: "#676767",
       },
       backgroundImage: {

@@ -13,7 +13,7 @@ const ProductDetailCard = ({ product }: ProductDetailProps) => {
     <div
       className={classNames(
         styles.card_rounded,
-        "w-full mx-96 min-h-[30rem] rounded-3xl bg-grayish mb-32 grid grid-cols-3"
+        "w-full mx-96 min-h-[30rem] rounded-3xl bg-grayishbg mb-32 grid grid-cols-3"
       )}
     >
       <ImageContainer image={product.thumbnail} />

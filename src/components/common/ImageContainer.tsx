@@ -18,7 +18,7 @@ const ImageContainer: React.FC<ContainerProps> = ({
     <div
       className={classNames(
         styles.card,
-        "bg-grayish",
+        "bg-grayishbg",
         {
           "my-8 ml-8 w-full ": !longCard,
         },
