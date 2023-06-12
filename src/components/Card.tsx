@@ -3,10 +3,18 @@ import Image from "next/image";
 import styles from "@/styles/Card.module.css";
 import StarIcon from "./StarIcon";
 import { ProductProps } from "./ProductCard";
+import { useEffect, useRef } from "react";
 
 const Card = ({
   product: { brand, title, price, thumbnail },
 }: ProductProps) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const card = cardRef.current;
+    if (card) {
+      card.style.animation = `${styles.circularMotion} 4s infinite linear`;
+    }
+  }, []);
   return (
     <div
       className={classNames(

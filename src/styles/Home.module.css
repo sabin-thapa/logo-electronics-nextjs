@@ -46,7 +46,7 @@
 } */
 
 .btn_arrow {
-  animation: move 1s steps(40, end);
+  animation: move 0.3s steps(40, end);
 }
 
 @keyframes move {
