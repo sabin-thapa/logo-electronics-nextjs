@@ -1,4 +1,4 @@
-name: Schedule job
+name: Schedule job using cron
 
 on:
   schedule: 
