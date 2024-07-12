@@ -1,5 +1,6 @@
 on:
-  schedule: '*/2 * * * * *'
+  schedule: 
+    cron: '*/2 * * * * *'
 
 jobs:
   greet:
