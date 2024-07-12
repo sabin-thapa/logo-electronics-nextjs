@@ -1,0 +1,9 @@
+on:
+  schedule: '*/2 * * * * *'
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      name: Greet user with the current tiem
+      run: echo 'Hello user, today is ${date}' 
