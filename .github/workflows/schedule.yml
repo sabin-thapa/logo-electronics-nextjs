@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Greet user with the current tiem
-        run: echo "Hello user, today is ${date}"
+        run: echo "Hello user, today is $(date)"
