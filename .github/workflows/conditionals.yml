@@ -1,0 +1,14 @@
+name: Conditional jobs
+on: [push]
+jobs:
+    current-repo-run:
+        if: github.repository == 'sabin-thapa/logo-electronics-nextjs'
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo something
+              run: echo ${{github.repository}}
+    regular-run:
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo my name
+              run: echo "Hello Sabin"
