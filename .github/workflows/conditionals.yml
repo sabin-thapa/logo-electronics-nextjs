@@ -13,4 +13,4 @@ jobs:
             - name: step 1
               run: echo "NAME=Sabin" >> $GITHUB_ENV
             - name: step 2
-              run: echo $NAME
+              run: echo "Hello $NAME"
